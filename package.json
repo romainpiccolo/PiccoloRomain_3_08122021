@@ -1,0 +1,19 @@
+{
+  "name": "p03_ohmyfood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/kronox21/p03_ohmyfood.git"
+  },
+  "author": "kronox21",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://bitbucket.org/kronox21/p03_ohmyfood/issues"
+  },
+  "homepage": "https://bitbucket.org/kronox21/p03_ohmyfood#readme"
+}
