@@ -1,0 +1,22 @@
+.tracking {
+    @include d-flex(center, center);
+    height: 6vh;
+    font-size: 1.1rem;
+    font-weight: 400;
+    background-color: $colour-grey;
+
+    &__icon {
+        position: relative;
+        top: 0;
+        right: .8rem;
+    }
+}
+
+.introduction {
+    @include d-flex(center, center, column);
+
+    &__title {
+        font-size: 1.7rem;
+        font-weight: bold;
+    }
+}

@@ -1,3 +1,6 @@
 .header {
-    
+    @include d-flex(center, center);
+    @include shadow-primary;
+    height: 8vh;
+    position: sticky;
 }

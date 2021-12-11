@@ -1,15 +1,10 @@
-// @mixin btn {
-//     background-color: $cd-btn-start;
-//     color: $cd-txt;
-//     border: 4px solid $cd-btn;
-//     border-radius: 10rem;
-//     cursor: pointer;
-//     font-size: 3rem;
-//     padding: 1.85rem 3rem;
-//     transition: transform 450ms, background-color 300ms 150ms;
+@mixin shadow-primary {
+    box-shadow: $shadow-low $shadow-low $shadow-low $shadow-low rgba(124, 124, 124, 0.28);;
+}
 
-//     &:hover {
-//         transform: scale(1.13);
-//         background-color: $cd-btn-end;
-//     }
-// }
+@mixin d-flex($justifycontent: flex-start, $alignitems: flex-start, $direction: row) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justifycontent;
+    align-items: $alignitems;
+}

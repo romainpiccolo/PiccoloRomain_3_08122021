@@ -8,6 +8,19 @@ html {
   box-sizing: inherit;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -350,11 +363,50 @@ template {
 body {
   font-family: "Roboto", sans-serif;
   font-size: 2rem;
+  font-weight: 100;
 }
 
 h1 {
   font-family: "Shrikhand", cursive;
   font-size: 2rem;
+  font-weight: 100;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem rgba(124, 124, 124, 0.28);
+  height: 8vh;
+  position: sticky;
+}
+
+.tracking {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 6vh;
+  font-size: 1.1rem;
+  font-weight: 400;
+  background-color: #f0f2f0;
+}
+.tracking__icon {
+  position: relative;
+  top: 0;
+  right: 0.8rem;
+}
+
+.introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.introduction__title {
+  font-size: 1.7rem;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */
