@@ -433,15 +433,15 @@ h1 {
 .working {
   padding: 2rem;
 }
+.working__title {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
 .working-container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-}
-.working__title {
-  font-size: 1.6rem;
-  font-weight: bold;
 }
 .working__item {
   display: flex;
@@ -494,6 +494,21 @@ h1 {
 .working__item:last-child i {
   color: #9356DC;
   font-size: 1rem;
+}
+
+.restaurants {
+  padding: 2rem;
+  background-color: #f7f7f7;
+}
+.restaurants__title {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.restaurants-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */

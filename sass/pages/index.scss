@@ -48,12 +48,12 @@
 .working {
 	padding: $padding-primary;
 
-	&-container {
-		@include d-flex(flex-start, center, column);
+    &__title {
+		@include font-title;
 	}
 
-	&__title {
-		@include font-title;
+	&-container {
+		@include d-flex(flex-start, center, column);
 	}
 
 	&__item {
@@ -67,43 +67,56 @@
 		font-size: 1rem;
 		font-weight: 500;
 
-        &-number {
-            @include d-flex(center, center);
+		&-number {
+			@include d-flex(center, center);
 			position: relative;
-            right: 0.6rem;
-            height: 20px;
-            width: 20px;
+			right: 0.6rem;
+			height: 20px;
+			width: 20px;
 			padding: 12px;
-          
+
 			background-color: $colour-primary;
-            color: $colour-white;
+			color: $colour-white;
 			border-radius: 100%;
-        }
+		}
 
-        &-label {
-            @include d-flex(center, center);
-            width: 100%;
+		&-label {
+			@include d-flex(center, center);
+			width: 100%;
 
-            > i {
-                text-align: center;
-                width: 20%;
-                right: 2.5rem;
-                color: grey;
-                font-size: 1.2rem;
-            }
-            
-            > span {
-                width: 80%;
-            }
-        }
+			> i {
+				text-align: center;
+				width: 20%;
+				right: 2.5rem;
+				color: grey;
+				font-size: 1.2rem;
+			}
+
+			> span {
+				width: 80%;
+			}
+		}
 	}
 
-    &__item:last-child {
-        background-color: $colour-primary-light;
+	&__item:last-child {
+		background-color: $colour-primary-light;
 
-        i {
-            color: $colour-primary;
-            font-size: 1rem;
-        }
+		i {
+			color: $colour-primary;
+			font-size: 1rem;
+		}
+	}
+}
+
+.restaurants {
+	padding: $padding-primary;
+	background-color: $colour-lightgrey;
+
+    &__title {
+		@include font-title;
     }
+
+    &-container {
+		@include d-flex(flex-start, center, column);
+	}
 }
