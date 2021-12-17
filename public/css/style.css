@@ -387,10 +387,10 @@ h1 {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 6vh;
   font-size: 1.1rem;
   font-weight: 400;
-  background-color: #f0f2f0;
+  height: 6vh;
+  background-color: #eaeaea;
 }
 .tracking__icon {
   position: relative;
@@ -403,10 +403,97 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 2rem 2rem 3rem 2rem;
+  background-color: #f7f7f7;
 }
 .introduction__title {
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   font-weight: bold;
+  text-align: center;
+  padding: 0.7rem 1.3rem 0.7rem 1.3rem;
+  margin: 0;
+}
+.introduction__paragraph {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+.introduction__button {
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  padding: 1rem 1.6rem 1rem 1.6rem;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  border-radius: 2rem;
+  box-shadow: 0.15rem 0.15rem 0.15rem 0.15rem rgba(124, 124, 124, 0.28);
+  margin-top: 1rem;
+}
+
+.working {
+  padding: 2rem;
+}
+.working-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.working__title {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.working__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.5rem;
+  box-shadow: 5px 5px 7px -2px #e0e0e0;
+  background-color: #f7f7f7;
+  width: 100%;
+  height: 5rem;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.working__item-number {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: 0.6rem;
+  height: 20px;
+  width: 20px;
+  padding: 12px;
+  background-color: #9356DC;
+  color: white;
+  border-radius: 100%;
+}
+.working__item-label {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.working__item-label > i {
+  text-align: center;
+  width: 20%;
+  right: 2.5rem;
+  color: grey;
+  font-size: 1.2rem;
+}
+.working__item-label > span {
+  width: 80%;
+}
+.working__item:last-child {
+  background-color: #f4eefc;
+}
+.working__item:last-child i {
+  color: #9356DC;
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

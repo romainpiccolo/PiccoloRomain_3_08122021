@@ -1,5 +1,9 @@
-@mixin shadow-primary {
-    box-shadow: $shadow-low $shadow-low $shadow-low $shadow-low rgba(124, 124, 124, 0.28);;
+@mixin shadow-primary($shadow-size: $shadow-low) {
+    box-shadow: $shadow-size $shadow-size $shadow-size $shadow-size rgba(124, 124, 124, 0.28);;
+}
+
+@mixin shadow-secondary() {
+    box-shadow: 5px 5px 7px -2px lighten(lightgray, $amount: 5);
 }
 
 @mixin d-flex($justifycontent: flex-start, $alignitems: flex-start, $direction: row) {
@@ -7,4 +11,35 @@
     flex-direction: $direction;
     justify-content: $justifycontent;
     align-items: $alignitems;
+}
+
+@mixin font-tracking {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+@mixin font-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+@mixin font-paragraph {
+    font-size: 1.2rem;
+}
+
+@mixin btn($padding: 1rem, $background: white, $color: black) {
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: $color;
+    padding: $padding;
+    background: $background;
+}
+
+@mixin rounded {
+    border-radius: 2rem;
+}
+
+@mixin semi-rounded {
+    border-radius: 1.5rem;
 }

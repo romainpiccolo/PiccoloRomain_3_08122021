@@ -1,6 +1,16 @@
 $colour-primary: #9356DC;
+$colour-primary-light: lighten($colour-primary, 36);
 $colour-secondary: #FF79DA;
 $colour-tertiary: #99E2D0;
-$colour-grey : #f0f2f0;
+$colour-grey: #eaeaea;
+$colour-lightgrey: lighten($colour-grey, 5);
+$colour-white: white;
 
 $shadow-low: .1rem;
+
+$button-padding-primary: 1rem 1.6rem 1rem 1.6rem;
+$button-padding-secondary: 2rem 1.6rem 2rem 1.6rem;
+
+$padding-primary: 2rem;
+
+$circle-radius: 5rem;
