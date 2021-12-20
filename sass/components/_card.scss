@@ -1,0 +1,48 @@
+.card {
+    @include semi-rounded;
+    @include shadow-secondary;
+	width: 100%;
+
+	&__img {
+        @include semi-rounded-top;
+		width: inherit;
+        height: 200px;
+        background-color: white;
+	}
+
+    &__img img {
+        @include semi-rounded-top;
+        object-fit: cover;
+		width: inherit;
+        height: inherit;
+        
+    }
+
+    &__body {
+        @include d-flex(space-between, center);
+        @include semi-rounded-bottom;
+        background-color: white;
+        padding: 0 1rem 0 1rem;
+        line-height: 1.5rem;
+        height: 75px;
+
+        &-heading {
+            @include d-flex(center, flex-start, column);
+            height: inherit;
+
+            h2 {
+                @include reset-m-bottom;
+                font-size: 1.3rem;
+                font-weight: bold;
+            }
+            p {
+                @include reset-m-top;
+                font-size: 1rem;
+                font-weight: 300;
+            }
+        }
+        &-icon {
+            font-size: 1.5rem;
+        }
+    }
+}

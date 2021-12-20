@@ -1,3 +1,15 @@
+@mixin reset-m {
+    margin: 0;
+}
+
+@mixin reset-m-top {
+    margin-top: 0;
+}
+
+@mixin reset-m-bottom {
+    margin-bottom: 0;
+}
+
 @mixin shadow-primary($shadow-size: $shadow-low) {
     box-shadow: $shadow-size $shadow-size $shadow-size $shadow-size rgba(124, 124, 124, 0.28);;
 }
@@ -40,6 +52,22 @@
     border-radius: 2rem;
 }
 
+@mixin rounded-top {
+    border-radius: 2rem 2rem 0 0;
+}
+
+@mixin rounded-bottom {
+    border-radius: 0 0 2rem 2rem;
+}
+
 @mixin semi-rounded {
     border-radius: 1.5rem;
+}
+
+@mixin semi-rounded-top {
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+
+@mixin semi-rounded-bottom {
+    border-radius: 0 0 1.5rem 1.5rem;
 }

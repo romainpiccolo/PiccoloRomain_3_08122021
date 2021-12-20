@@ -1,0 +1,31 @@
+.footer {
+	padding: $padding-primary;
+    background-color: $colour-darkgrey;
+    color: $colour-white;
+
+    h2 {
+        font-family: 'Shrikhand', cursive;
+        font-size: 1.2rem;
+        font-weight: 100;
+    }
+
+
+    ul {
+        @include reset-m;
+        line-height: 1.6rem;
+        
+    }
+    li {
+        font-size: 1rem;
+        font-weight: bolder;
+
+        i {
+            width: 25px;
+        }
+
+
+        &:nth-child(-n+2) {
+            font-weight: bold;
+        }
+    }
+}

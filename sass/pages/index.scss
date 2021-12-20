@@ -109,14 +109,16 @@
 }
 
 .restaurants {
-	padding: $padding-primary;
+	padding: 4rem $padding-primary 4rem $padding-primary;
 	background-color: $colour-lightgrey;
 
     &__title {
 		@include font-title;
+        margin-top: 0
     }
 
     &-container {
 		@include d-flex(flex-start, center, column);
+        gap: 1.5rem;
 	}
 }
