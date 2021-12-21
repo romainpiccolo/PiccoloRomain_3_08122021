@@ -1,7 +1,13 @@
+$breakpoints: (
+    tablet: 768px,
+    desktop: 992px
+);
+
 $colour-primary: #9356DC;
 $colour-primary-light: lighten($colour-primary, 36);
 $colour-secondary: #FF79DA;
 $colour-tertiary: #99E2D0;
+$colour-tertiary-dark: darken($colour-tertiary, 45);
 $colour-grey: #eaeaea;
 $colour-darkgrey: #353535;
 $colour-lightgrey: lighten($colour-grey, 5);

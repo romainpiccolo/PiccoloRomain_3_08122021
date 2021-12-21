@@ -1,13 +1,25 @@
 .card {
     @include semi-rounded;
     @include shadow-secondary;
-	width: 100%;
+	width: 350px;
 
 	&__img {
         @include semi-rounded-top;
 		width: inherit;
         height: 200px;
         background-color: white;
+
+        &-new {
+            position: relative;
+            bottom: 12.5rem;
+            left: 16rem;
+            background-color: $colour-tertiary;
+            color: $colour-tertiary-dark;
+            border-radius: .1rem;
+            padding: .4rem .6rem .4rem .6rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
 	}
 
     &__img img {
@@ -15,7 +27,6 @@
         object-fit: cover;
 		width: inherit;
         height: inherit;
-        
     }
 
     &__body {

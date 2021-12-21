@@ -50,10 +50,19 @@
 
     &__title {
 		@include font-title;
+
+        @include tablet {
+            @include d-flex(center);
+        };
 	}
 
 	&-container {
 		@include d-flex(flex-start, center, column);
+
+        @include desktop {
+            @include d-flex(center);
+            justify-content: space-evenly;
+        }
 	}
 
 	&__item {
@@ -66,6 +75,14 @@
 		margin-bottom: 2rem;
 		font-size: 1rem;
 		font-weight: 500;
+
+        @include tablet {
+            width: 40%;
+        }
+
+        @include desktop {
+            width: 25%;
+        }
 
 		&-number {
 			@include d-flex(center, center);
@@ -114,11 +131,17 @@
 
     &__title {
 		@include font-title;
-        margin-top: 0
+        margin-top: 0;
+
+        @include tablet {
+            @include d-flex(center);
+        };
     }
 
     &-container {
-		@include d-flex(flex-start, center, column);
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 350px);
+        justify-content: center;
         gap: 1.5rem;
 	}
 }
