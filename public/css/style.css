@@ -458,12 +458,6 @@ h1 {
   color: transparent;
 }
 
-@keyframes fill-heart {
-  100% {
-    font-weight: bold;
-    transform: font-weight;
-  }
-}
 .header {
   display: flex;
   flex-direction: row;
