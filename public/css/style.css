@@ -455,6 +455,9 @@ h1 {
 .footer li:nth-child(-n+2) {
   font-weight: bold;
 }
+.footer li a {
+  color: white;
+}
 
 .tracking {
   display: flex;
@@ -499,6 +502,7 @@ h1 {
   color: white;
   padding: 1rem 1.6rem 1rem 1.6rem;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  cursor: pointer;
   border-radius: 2rem;
   box-shadow: 0.15rem 0.15rem 0.15rem 0.15rem rgba(124, 124, 124, 0.28);
   margin-top: 1rem;

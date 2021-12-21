@@ -46,6 +46,7 @@
     color: $color;
     padding: $padding;
     background: $background;
+    cursor: pointer;
 }
 
 @mixin rounded {
