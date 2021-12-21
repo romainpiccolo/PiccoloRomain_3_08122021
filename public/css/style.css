@@ -372,6 +372,25 @@ h1 {
   font-weight: 100;
 }
 
+.btn-primary {
+  color: white;
+  padding: 1rem 1.6rem 1rem 1.6rem;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  cursor: pointer;
+  border-radius: 2rem;
+  box-shadow: 0.15rem 0.15rem 0.15rem 0.15rem rgba(124, 124, 124, 0.28);
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.btn-primary:hover {
+  background: linear-gradient(to bottom right, #ff83dd, #985ede);
+  box-shadow: 0.15rem 0.15rem 0.15rem 0.15rem rgba(124, 124, 124, 0.5);
+}
+
 .card {
   border-radius: 1.5rem;
   box-shadow: 5px 5px 7px -2px #e0e0e0;
@@ -431,13 +450,26 @@ h1 {
 .card__body-icon {
   font-size: 1.5rem;
 }
+.card__body-icon i:hover {
+  transition: all 1000ms ease-in-out;
+  font-weight: bold;
+  background-image: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
+  background-clip: text;
+  color: transparent;
+}
 
+@keyframes fill-heart {
+  100% {
+    font-weight: bold;
+    transform: font-weight;
+  }
+}
 .header {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem rgba(124, 124, 124, 0.28);
+  box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem #7c7c7c;
   height: 8vh;
   position: sticky;
   width: 100%;
@@ -522,18 +554,6 @@ h1 {
   font-size: 1.2rem;
   text-align: center;
   margin: 0 0 1rem 0;
-}
-.introduction__button {
-  border: none;
-  font-size: 1rem;
-  font-weight: bold;
-  color: white;
-  padding: 1rem 1.6rem 1rem 1.6rem;
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  cursor: pointer;
-  border-radius: 2rem;
-  box-shadow: 0.15rem 0.15rem 0.15rem 0.15rem rgba(124, 124, 124, 0.28);
-  margin-top: 1rem;
 }
 
 .working {

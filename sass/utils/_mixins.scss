@@ -28,9 +28,9 @@
 	margin-bottom: 0;
 }
 
-@mixin shadow-primary($shadow-size: $shadow-low) {
+@mixin shadow-primary($shadow-size: $shadow-low, $opacity: 1) {
 	box-shadow: $shadow-size $shadow-size $shadow-size $shadow-size
-		rgba(124, 124, 124, 0.28);
+		rgba(124, 124, 124, $opacity);
 }
 
 @mixin shadow-secondary() {
@@ -63,9 +63,6 @@
 }
 
 @mixin btn($padding: 1rem, $background: white, $color: black) {
-	border: none;
-	font-size: 1rem;
-	font-weight: bold;
 	color: $color;
 	padding: $padding;
 	background: $background;

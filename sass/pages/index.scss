@@ -28,21 +28,6 @@
 		text-align: center;
 		margin: 0 0 1rem 0;
 	}
-
-	&__button {
-		@include btn(
-			$button-padding-primary,
-			linear-gradient(
-				to bottom right,
-				$colour-secondary,
-				$colour-primary
-			),
-			$colour-white
-		);
-		@include rounded;
-		@include shadow-primary(0.15rem);
-		margin-top: 1rem;
-	}
 }
 
 .working {

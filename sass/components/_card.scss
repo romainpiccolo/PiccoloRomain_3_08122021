@@ -1,59 +1,76 @@
 .card {
-    @include semi-rounded;
-    @include shadow-secondary;
+	@include semi-rounded;
+	@include shadow-secondary;
 	width: 350px;
 
 	&__img {
-        @include semi-rounded-top;
+		@include semi-rounded-top;
 		width: inherit;
-        height: 200px;
-        background-color: white;
+		height: 200px;
+		background-color: white;
 
-        &-new {
-            position: relative;
-            bottom: 12.5rem;
-            left: 16rem;
-            background-color: $colour-tertiary;
-            color: $colour-tertiary-dark;
-            border-radius: .1rem;
-            padding: .4rem .6rem .4rem .6rem;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
+		&-new {
+			position: relative;
+			bottom: 12.5rem;
+			left: 16rem;
+			background-color: $colour-tertiary;
+			color: $colour-tertiary-dark;
+			border-radius: 0.1rem;
+			padding: 0.4rem 0.6rem 0.4rem 0.6rem;
+			font-size: 0.9rem;
+			font-weight: 500;
+		}
 	}
 
-    &__img img {
-        @include semi-rounded-top;
-        object-fit: cover;
+	&__img img {
+		@include semi-rounded-top;
+		object-fit: cover;
 		width: inherit;
-        height: inherit;
-    }
+		height: inherit;
+	}
 
-    &__body {
-        @include d-flex(space-between, center);
-        @include semi-rounded-bottom;
-        background-color: white;
-        padding: 0 1rem 0 1rem;
-        line-height: 1.5rem;
-        height: 75px;
+	&__body {
+		@include d-flex(space-between, center);
+		@include semi-rounded-bottom;
+		background-color: white;
+		padding: 0 1rem 0 1rem;
+		line-height: 1.5rem;
+		height: 75px;
 
-        &-heading {
-            @include d-flex(center, flex-start, column);
-            height: inherit;
+		&-heading {
+			@include d-flex(center, flex-start, column);
+			height: inherit;
 
-            h2 {
-                @include reset-m-bottom;
-                font-size: 1.3rem;
-                font-weight: bold;
+			h2 {
+				@include reset-m-bottom;
+				font-size: 1.3rem;
+				font-weight: bold;
+			}
+			p {
+				@include reset-m-top;
+				font-size: 1rem;
+				font-weight: 300;
+			}
+		}
+		&-icon {
+			font-size: 1.5rem;
+
+            i:hover {
+                transition: all 1000ms ease-in-out;
+				font-weight: bold;
+                background-image: $icon-bg-primary;
+                background-clip: text;
+                color: transparent;
             }
-            p {
-                @include reset-m-top;
-                font-size: 1rem;
-                font-weight: 300;
-            }
-        }
-        &-icon {
-            font-size: 1.5rem;
-        }
-    }
+		}
+	}
+}
+
+@keyframes fill-heart {
+	0% {
+	}
+	100% {
+		font-weight: bold;
+        transform: font-weight;
+	}
 }

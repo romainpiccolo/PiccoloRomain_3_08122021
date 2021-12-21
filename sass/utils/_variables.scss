@@ -14,10 +14,13 @@ $colour-lightgrey: lighten($colour-grey, 5);
 $colour-white: white;
 
 $shadow-low: .1rem;
+$shadow-opacity-primary: .28;
 
 $button-padding-primary: 1rem 1.6rem 1rem 1.6rem;
 $button-padding-secondary: 2rem 1.6rem 2rem 1.6rem;
+$button-bg-primary: linear-gradient(to bottom right, $colour-secondary, $colour-primary);
+$button-bg-primary-light: linear-gradient(to bottom right, lighten($colour-secondary,2), lighten($colour-primary,2));
+
+$icon-bg-primary: linear-gradient(to bottom,$colour-primary 0%,$colour-secondary 100%);
 
 $padding-primary: 2rem;
-
-$circle-radius: 5rem;
