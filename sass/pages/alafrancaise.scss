@@ -1,0 +1,63 @@
+main {
+    position: relative;
+}
+
+.photo {
+	position: relative;
+
+	&-container {
+        height: 350px;
+
+		img {
+			height: inherit;
+			width: 100%;
+			object-fit: cover;
+			object-position: 50% 25%;
+		}
+	}
+}
+
+
+.restaurant {
+    @include rounded-top;
+    background: $colour-lightgrey;
+	padding: $padding-secondary;
+    margin-top: -2rem;
+
+
+    &__title {
+        @include d-flex(space-between, center);
+
+        @include tablet {
+            @include d-flex(center, center);
+            gap: 2rem;
+        };
+    }
+
+    &__menu {
+        display: grid;
+        gap: 2rem;
+
+        @include desktop {
+            h3 {
+                text-align: center
+            }
+        };
+        
+    }
+
+    &__action {
+        @include d-flex(center);
+        margin: 3rem 0 4rem 0;
+    }
+}
+
+.menu-container {
+    @include d-flex(center, center);
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    @include tablet {
+        @include d-flex(center, center, column);
+    };
+}

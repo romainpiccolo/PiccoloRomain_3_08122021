@@ -1,18 +1,19 @@
 .card {
 	@include semi-rounded;
 	@include shadow-secondary;
-	width: 350px;
+	width: 100%;
 
 	&__img {
-		@include semi-rounded-top;
+		@include rounded-light-top;
+        position: relative;
 		width: inherit;
 		height: 200px;
 		background-color: white;
 
 		&-new {
-			position: relative;
-			bottom: 12.5rem;
-			left: 16rem;
+            position: absolute;
+            top: 6%;
+            left: 74%;
 			background-color: $colour-tertiary;
 			color: $colour-tertiary-dark;
 			border-radius: 0.1rem;
@@ -23,7 +24,7 @@
 	}
 
 	&__img img {
-		@include semi-rounded-top;
+		@include rounded-light-top;
 		object-fit: cover;
 		width: inherit;
 		height: inherit;
@@ -31,7 +32,7 @@
 
 	&__body {
 		@include d-flex(space-between, center);
-		@include semi-rounded-bottom;
+		@include rounded-light-bottom;
 		background-color: white;
 		padding: 0 1rem 0 1rem;
 		line-height: 1.5rem;

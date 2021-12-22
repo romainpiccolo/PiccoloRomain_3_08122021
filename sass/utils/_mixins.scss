@@ -10,12 +10,6 @@
 	}
 }
 
-@mixin desktop {
-	@media screen and (min-width: map-get($breakpoints, tablet)) {
-		@content;
-	}
-}
-
 @mixin reset-m {
 	margin: 0;
 }
@@ -92,3 +86,16 @@
 @mixin semi-rounded-bottom {
 	border-radius: 0 0 1.5rem 1.5rem;
 }
+
+@mixin rounded-light {
+	border-radius: 1rem;
+}
+
+@mixin rounded-light-top {
+	border-radius: 1rem 1rem 0 0;
+}
+
+@mixin rounded-light-bottom {
+	border-radius: 0 0 1rem 1rem;
+}
+

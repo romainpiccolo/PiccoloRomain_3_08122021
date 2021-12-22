@@ -1,0 +1,33 @@
+.menu-item {
+    @include rounded-light;
+    @include shadow-secondary;
+    width: 100%;
+    background-color: $colour-white;
+    padding: 1rem;
+    line-height: 1.5rem;
+    cursor: pointer;
+
+    @include tablet {
+        width: 80%;
+    };
+
+    @include desktop {
+        width: 50%;
+    };
+
+
+    &__label {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    &__infos {
+        @include d-flex(space-between, center);
+        font-size: 1.1rem;
+        font-weight: 300;
+
+        span:last-child {
+            font-weight: bold;
+        }
+    }
+}
