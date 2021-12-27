@@ -466,11 +466,13 @@ h3 {
 .menu-item {
   border-radius: 1rem;
   box-shadow: 5px 5px 7px -2px #e0e0e0;
+  position: relative;
   width: 100%;
   background-color: white;
   padding: 1rem;
   line-height: 1.5rem;
   cursor: pointer;
+  overflow: hidden;
 }
 @media screen and (min-width: 768px) {
   .menu-item {
@@ -482,6 +484,15 @@ h3 {
     width: 50%;
   }
 }
+.menu-item:hover .menu-item__validation {
+  animation: validate 400ms forwards ease-in-out;
+}
+.menu-item:hover .menu-item__validation i {
+  animation: validate-rotate 400ms forwards ease-in-out;
+}
+.menu-item:hover .menu-item__infos {
+  animation: resize 400ms forwards ease-in-out;
+}
 .menu-item__label {
   font-size: 1.2rem;
   font-weight: bold;
@@ -491,13 +502,56 @@ h3 {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   font-size: 1.1rem;
   font-weight: 300;
 }
+.menu-item__infos span:first-child {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 86%;
+}
 .menu-item__infos span:last-child {
   font-weight: bold;
+  width: 7%;
+}
+.menu-item__validation {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+  color: white;
+  position: absolute;
+  height: 100%;
+  width: 5rem;
+  top: 0;
+  right: -5rem;
+  background: #99E2D0;
 }
 
+@keyframes validate {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-5rem);
+  }
+}
+@keyframes validate-rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+@keyframes resize {
+  to {
+    width: calc(100% - 5rem);
+  }
+}
 .header {
   display: flex;
   flex-direction: row;

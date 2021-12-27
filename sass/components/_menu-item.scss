@@ -1,33 +1,96 @@
 .menu-item {
-    @include rounded-light;
-    @include shadow-secondary;
-    width: 100%;
-    background-color: $colour-white;
-    padding: 1rem;
-    line-height: 1.5rem;
-    cursor: pointer;
+	@include rounded-light;
+	@include shadow-secondary;
+    position: relative;
+	width: 100%;
+	background-color: $colour-white;
+	padding: 1rem;
+	line-height: 1.5rem;
+	cursor: pointer;
+    overflow: hidden;
 
-    @include tablet {
-        width: 80%;
-    };
+	@include tablet {
+		width: 80%;
+	}
 
-    @include desktop {
-        width: 50%;
-    };
+	@include desktop {
+		width: 50%;
+	}
 
+	&:hover {
+        .menu-item__validation {
+            animation: validate 400ms forwards ease-in-out;
 
-    &__label {
-        font-size: 1.2rem;
-        font-weight: bold;
-    }
-
-    &__infos {
-        @include d-flex(space-between, center);
-        font-size: 1.1rem;
-        font-weight: 300;
-
-        span:last-child {
-            font-weight: bold;
+            i {
+                animation: validate-rotate 400ms forwards ease-in-out;
+            }
         }
+
+        .menu-item__infos {
+            animation: resize 400ms forwards ease-in-out;
+        }
+	}
+
+	&__label {
+		font-size: 1.2rem;
+		font-weight: bold;
+	}
+
+	&__infos {
+		@include d-flex(space-between, center);
+		width: 100%;
+		font-size: 1.1rem;
+		font-weight: 300;
+
+		span:first-child {
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
+            width: 86%;
+		}
+
+		span:last-child {
+			font-weight: bold;
+            width: 7%;
+		}
+	}
+
+    &__validation {
+        @include d-flex(center, center);
+        font-weight: 900;
+        color: white;
+        position: absolute;
+        height: 100%;
+        width: 5rem;
+        top: 0;
+        right: -5rem;
+        background: $colour-tertiary;
+    }
+}
+
+@keyframes validate {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-5rem);
+    }
+}
+
+@keyframes validate-rotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes resize {
+    from {
+        // width: calc(100% - 5rem);
+    }
+    to {
+        width: calc(100% - 5rem);
     }
 }
