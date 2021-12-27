@@ -2,7 +2,7 @@
 	@include rounded-light;
 	@include shadow-secondary;
     position: relative;
-	width: 100%;
+	width: 90vw;
 	background-color: $colour-white;
 	padding: 1rem;
 	line-height: 1.5rem;
@@ -26,7 +26,7 @@
             }
         }
 
-        .menu-item__infos {
+        .menu-item__infos, .menu-item__label  {
             animation: resize 400ms forwards ease-in-out;
         }
 	}
@@ -51,7 +51,7 @@
 
 		span:last-child {
 			font-weight: bold;
-            width: 7%;
+            padding-left: .2rem;
 		}
 	}
 
