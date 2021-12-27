@@ -841,4 +841,28 @@ main {
   }
 }
 
+.entrees {
+  opacity: 0;
+  animation: pop-menu 1000ms forwards ease-in-out 300ms;
+}
+
+.dishes {
+  opacity: 0;
+  animation: pop-menu 1000ms forwards ease-in-out 600ms;
+}
+
+.desserts {
+  opacity: 0;
+  animation: pop-menu 1000ms forwards ease-in-out 900ms;
+}
+
+@keyframes pop-menu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

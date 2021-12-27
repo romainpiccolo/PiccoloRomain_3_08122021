@@ -61,3 +61,20 @@ main {
         @include d-flex(center, center, column);
     };
 }
+
+@each $section, $i in $sections {
+    #{$section} {
+        opacity: 0;
+        animation: pop-menu 1000ms forwards ease-in-out 300ms * $i;
+    }
+}
+
+
+@keyframes pop-menu {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

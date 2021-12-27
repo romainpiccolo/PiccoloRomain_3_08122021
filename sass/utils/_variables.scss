@@ -3,6 +3,8 @@ $breakpoints: (
     desktop: 992px
 );
 
+$sections: ".entrees" 1, ".dishes" 2, ".desserts" 3;
+
 $colour-primary: #9356DC;
 $colour-primary-light: lighten($colour-primary, 36);
 $colour-secondary: #FF79DA;
