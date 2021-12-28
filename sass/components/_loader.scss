@@ -66,7 +66,7 @@
     height: 100px;
     background: $button-bg-primary;
     margin: 15px;   
-    animation: wave 1.2s ease-in-out 3 forwards;
+    animation: wave 1s ease-in-out 3 forwards;
     border-radius: 20px;
 }
 
@@ -95,5 +95,7 @@
     }
     100% {
       opacity: 0;
+    //   transform-origin: bottom;
+    //   transform: scaleY(0);
     }
 }

@@ -606,7 +606,7 @@ h3 {
   height: 100px;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   margin: 15px;
-  animation: wave 1.2s ease-in-out 3 forwards;
+  animation: wave 1s ease-in-out 3 forwards;
   border-radius: 20px;
 }
 
