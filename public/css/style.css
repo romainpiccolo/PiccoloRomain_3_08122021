@@ -807,6 +807,16 @@ main {
     gap: 2rem;
   }
 }
+.restaurant__title i {
+  cursor: pointer;
+}
+.restaurant__title i:hover {
+  transition: all 1000ms ease-in-out;
+  font-weight: bold;
+  background-image: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
+  background-clip: text;
+  color: transparent;
+}
 .restaurant__menu {
   display: grid;
   gap: 2rem;
@@ -860,7 +870,22 @@ main {
   }
 }
 .entrees h3 {
+  position: relative;
+}
+.entrees h3::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  width: 2.5rem;
   border-bottom: 2px solid #99E2D0;
+}
+@media screen and (min-width: 768px) {
+  .entrees h3 {
+    border-bottom: 2px solid #99E2D0;
+  }
+  .entrees h3::before {
+    content: none;
+  }
 }
 
 .dishes {
@@ -882,7 +907,22 @@ main {
   }
 }
 .dishes h3 {
+  position: relative;
+}
+.dishes h3::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  width: 2.5rem;
   border-bottom: 2px solid #99E2D0;
+}
+@media screen and (min-width: 768px) {
+  .dishes h3 {
+    border-bottom: 2px solid #99E2D0;
+  }
+  .dishes h3::before {
+    content: none;
+  }
 }
 
 .desserts {
@@ -904,7 +944,22 @@ main {
   }
 }
 .desserts h3 {
+  position: relative;
+}
+.desserts h3::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  width: 2.5rem;
   border-bottom: 2px solid #99E2D0;
+}
+@media screen and (min-width: 768px) {
+  .desserts h3 {
+    border-bottom: 2px solid #99E2D0;
+  }
+  .desserts h3::before {
+    content: none;
+  }
 }
 
 @keyframes pop-menu {

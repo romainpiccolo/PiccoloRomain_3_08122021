@@ -1,12 +1,12 @@
 main {
-    position: relative;
+	position: relative;
 }
 
 .photo {
 	position: relative;
 
 	&-container {
-        height: 350px;
+		height: 350px;
 
 		img {
 			height: inherit;
@@ -17,76 +17,97 @@ main {
 	}
 }
 
-
 .restaurant {
-    @include rounded-top;
-    background: $colour-lightgrey;
+	@include rounded-top;
+	background: $colour-lightgrey;
 	padding: $padding-secondary;
-    margin-top: -2rem;
+	margin-top: -2rem;
 
+	&__title {
+		@include d-flex(space-between, center);
 
-    &__title {
-        @include d-flex(space-between, center);
+		@include tablet {
+			@include d-flex(center, center);
+			gap: 2rem;
+		}
 
-        @include tablet {
-            @include d-flex(center, center);
-            gap: 2rem;
-        };
-    }
+        i {
+            cursor: pointer;
 
-    &__menu {
-        display: grid;
-        gap: 2rem;
+            &:hover {
+            @include fill-heart;
 
-        @include desktop {
-            h3 {
-                text-align: center
             }
-        };
-        
-    }
+        }
+	}
 
-    &__action {
-        @include d-flex(center);
-        margin: 3rem 0 4rem 0;
-    }
+	&__menu {
+		display: grid;
+		gap: 2rem;
+
+		@include desktop {
+			h3 {
+				text-align: center;
+			}
+		}
+	}
+
+	&__action {
+		@include d-flex(center);
+		margin: 3rem 0 4rem 0;
+	}
 }
 
 .menu-container {
-    @include d-flex(center, center);
-    flex-wrap: wrap;
-    gap: 1rem;
+	@include d-flex(center, center);
+	flex-wrap: wrap;
+	gap: 1rem;
 
-    @include tablet {
-        @include d-flex(center, center, column);
-    };
+	@include tablet {
+		@include d-flex(center, center, column);
+	}
 }
 
 @each $section, $i in $sections {
-    #{$section} {
-        opacity: 0;
-        animation: pop-menu 1000ms forwards ease-in-out 300ms * $i;
+	#{$section} {
+		opacity: 0;
+		animation: pop-menu 1000ms forwards ease-in-out 300ms * $i;
 
-        > div {
-            @include d-flex(flex-start, center);
+		> div {
+			@include d-flex(flex-start, center);
+
+			@include tablet {
+				@include d-flex(center, center);
+			}
+		}
+
+		h3 {
+			position: relative;
+
+			&::before {
+				content: '';
+				position: absolute;
+				bottom: -5px;
+				width: 2.5rem;
+				border-bottom: 2px solid $colour-tertiary;
+			}
 
             @include tablet {
-                @include d-flex(center, center);
-            };
-        }
+			    border-bottom: 2px solid $colour-tertiary;
 
-        h3 {
-            border-bottom: 2px solid $colour-tertiary;
-        }
-    }
+                &::before {
+                    content: none;
+                }
+            }
+		}
+	}
 }
 
-
 @keyframes pop-menu {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
