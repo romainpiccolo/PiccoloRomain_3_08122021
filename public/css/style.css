@@ -845,15 +845,66 @@ main {
   opacity: 0;
   animation: pop-menu 1000ms forwards ease-in-out 300ms;
 }
+.entrees > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .entrees > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.entrees h3 {
+  border-bottom: 2px solid #99E2D0;
+}
 
 .dishes {
   opacity: 0;
   animation: pop-menu 1000ms forwards ease-in-out 600ms;
 }
+.dishes > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .dishes > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.dishes h3 {
+  border-bottom: 2px solid #99E2D0;
+}
 
 .desserts {
   opacity: 0;
   animation: pop-menu 1000ms forwards ease-in-out 900ms;
+}
+.desserts > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .desserts > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.desserts h3 {
+  border-bottom: 2px solid #99E2D0;
 }
 
 @keyframes pop-menu {

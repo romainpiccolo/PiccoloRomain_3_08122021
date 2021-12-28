@@ -66,6 +66,18 @@ main {
     #{$section} {
         opacity: 0;
         animation: pop-menu 1000ms forwards ease-in-out 300ms * $i;
+
+        > div {
+            @include d-flex(flex-start, center);
+
+            @include tablet {
+                @include d-flex(center, center);
+            };
+        }
+
+        h3 {
+            border-bottom: 2px solid $colour-tertiary;
+        }
     }
 }
 
