@@ -565,7 +565,7 @@ h3 {
 }
 
 .wave {
-  width: 5px;
+  width: 10px;
   height: 100px;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   margin: 15px;
