@@ -56,9 +56,24 @@
 		&-icon {
 			font-size: 1.5rem;
 
-            i:hover {
-                @include fill-heart;
+            @include mobile {
+                i:active {
+                    @include fill-heart;
+                }
             }
+
+            @include tablet {
+                i:active {
+                    @include fill-heart;
+                }
+            }
+
+            @include desktop {
+                i:hover {
+                    @include fill-heart;
+                }
+            }
+           
 		}
 	}
 }

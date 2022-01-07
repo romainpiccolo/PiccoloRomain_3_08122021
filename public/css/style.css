@@ -455,12 +455,32 @@ h3 {
 .card__body-icon {
   font-size: 1.5rem;
 }
-.card__body-icon i:hover {
-  transition: all 1000ms ease-in-out;
-  font-weight: bold;
-  background-image: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
-  background-clip: text;
-  color: transparent;
+@media screen and (max-width: 768px) {
+  .card__body-icon i:active {
+    transition: all 1000ms ease-in-out;
+    font-weight: bold;
+    background-image: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
+    background-clip: text;
+    color: transparent;
+  }
+}
+@media screen and (min-width: 768px) {
+  .card__body-icon i:active {
+    transition: all 1000ms ease-in-out;
+    font-weight: bold;
+    background-image: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
+    background-clip: text;
+    color: transparent;
+  }
+}
+@media screen and (min-width: 992px) {
+  .card__body-icon i:hover {
+    transition: all 1000ms ease-in-out;
+    font-weight: bold;
+    background-image: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
+    background-clip: text;
+    color: transparent;
+  }
 }
 
 .menu-item {
@@ -474,24 +494,44 @@ h3 {
   cursor: pointer;
   overflow: hidden;
 }
+@media screen and (max-width: 768px) {
+  .menu-item:active .menu-item__validation {
+    animation: validate 400ms forwards ease-in-out;
+  }
+  .menu-item:active .menu-item__validation i {
+    animation: validate-rotate 400ms forwards ease-in-out;
+  }
+  .menu-item:active .menu-item__infos, .menu-item:active .menu-item__label {
+    animation: resize 400ms forwards ease-in-out;
+  }
+}
 @media screen and (min-width: 768px) {
   .menu-item {
     width: 80%;
+  }
+  .menu-item:active .menu-item__validation {
+    animation: validate 400ms forwards ease-in-out;
+  }
+  .menu-item:active .menu-item__validation i {
+    animation: validate-rotate 400ms forwards ease-in-out;
+  }
+  .menu-item:active .menu-item__infos, .menu-item:active .menu-item__label {
+    animation: resize 400ms forwards ease-in-out;
   }
 }
 @media screen and (min-width: 992px) {
   .menu-item {
     width: 50%;
   }
-}
-.menu-item:hover .menu-item__validation {
-  animation: validate 400ms forwards ease-in-out;
-}
-.menu-item:hover .menu-item__validation i {
-  animation: validate-rotate 400ms forwards ease-in-out;
-}
-.menu-item:hover .menu-item__infos, .menu-item:hover .menu-item__label {
-  animation: resize 400ms forwards ease-in-out;
+  .menu-item:hover .menu-item__validation {
+    animation: validate 400ms forwards ease-in-out;
+  }
+  .menu-item:hover .menu-item__validation i {
+    animation: validate-rotate 400ms forwards ease-in-out;
+  }
+  .menu-item:hover .menu-item__infos, .menu-item:hover .menu-item__label {
+    animation: resize 400ms forwards ease-in-out;
+  }
 }
 .menu-item__label {
   font-size: 1.2rem;

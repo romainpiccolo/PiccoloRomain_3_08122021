@@ -9,25 +9,57 @@
 	cursor: pointer;
     overflow: hidden;
 
+    @include mobile {
+        &:active {
+            .menu-item__validation {
+                animation: validate 400ms forwards ease-in-out;
+    
+                i {
+                    animation: validate-rotate 400ms forwards ease-in-out;
+                }
+            }
+    
+            .menu-item__infos, .menu-item__label  {
+                animation: resize 400ms forwards ease-in-out;
+            }
+        }
+    }
+
 	@include tablet {
 		width: 80%;
+
+        &:active {
+            .menu-item__validation {
+                animation: validate 400ms forwards ease-in-out;
+    
+                i {
+                    animation: validate-rotate 400ms forwards ease-in-out;
+                }
+            }
+    
+            .menu-item__infos, .menu-item__label  {
+                animation: resize 400ms forwards ease-in-out;
+            }
+        }
 	}
+
+
 
 	@include desktop {
 		width: 50%;
-	}
 
-	&:hover {
-        .menu-item__validation {
-            animation: validate 400ms forwards ease-in-out;
-
-            i {
-                animation: validate-rotate 400ms forwards ease-in-out;
+        &:hover {
+            .menu-item__validation {
+                animation: validate 400ms forwards ease-in-out;
+    
+                i {
+                    animation: validate-rotate 400ms forwards ease-in-out;
+                }
             }
-        }
-
-        .menu-item__infos, .menu-item__label  {
-            animation: resize 400ms forwards ease-in-out;
+    
+            .menu-item__infos, .menu-item__label  {
+                animation: resize 400ms forwards ease-in-out;
+            }
         }
 	}
 
